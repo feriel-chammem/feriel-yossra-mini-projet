@@ -1,0 +1,34 @@
+<form [formGroup]="voyageForm">
+  <br><br>
+  <div style="text-align: center;">
+    <table><tr><td></td>
+      
+   <td>
+  <span style="color: royalblue;font-weight: bold;font-size: large;">Modifier libellé :</span><br><br>
+  
+  <input  type="text" name="libelle" formControlName="libelle"><br><br></td>
+  <td></td><td>
+  <span style="color: royalblue;font-weight: bold;font-size: large;">Modifier la photo :</span><br>
+  <input  type="text" name="photo" formControlName="photo"><br><br></td></tr>
+<tr><td></td><td>
+  <span style="color: royalblue;font-weight: bold;font-size: large;">Modifier Prix :</span><br>
+  <input  type="text" name="prix" formControlName="prix"><br><br></td>
+  <td></td><td>
+  <span style="color: royalblue;font-weight: bold;font-size: large;">Promotion :</span><br>
+  <input  type="text" name="promotion" formControlName="promotion"><br><br></td></tr>
+<tr><td></td><td>
+  <span style="color: royalblue;font-weight: bold;font-size: large;">Modifier date de départ :</span><br>
+  <input  type="text" name="datedepart" formControlName="datedepart"><br><br></td><td></td><td>
+  <span style="color: royalblue;font-weight: bold;font-size: large;">Modifier date d'arrivée :</span><br>
+  <input  type="text" name="datearrive" formControlName="datearrive"><br><br></td></tr>
+  <tr><td></td><td>
+  <span style="color: royalblue;font-weight: bold;font-size: large;">Modifier date de paiement :</span><br>
+  <input  type="text" name="datepaiement" formControlName="datepaiement"><br><br></td><td></td><td>
+  <span style="color: royalblue;font-weight: bold;font-size: large;">Modifier les destinations :</span><br>
+  <input  type="text" name="destination" formControlName="destination"><br><br></td></tr><tr><td></td><td>
+  <span style="color: royalblue;font-weight: bold;font-size: large;">Modifier le nombre des jours :</span><br>
+  <input  type="text" name="nbjours" formControlName="nbjours"><br><br><td></td></td></tr>
+</table>
+
+    <button  class="btn btn-info " (click)="modifier();">Enregistrer les Modifications </button></div>
+</form>

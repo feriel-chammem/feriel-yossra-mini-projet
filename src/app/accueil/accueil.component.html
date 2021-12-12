@@ -1,0 +1,46 @@
+
+<body>
+    <h2>Les voyages</h2> <br>
+    <h4>Resultat Recherchée</h4>
+    {{v1|json}}
+
+   
+    <table>
+        <thead>
+            <tr><th></th> <th></th><th></th>
+                <th><form #f="ngForm">
+                    <input  name="rechercher" class="c" placeholder="Rechercher un voyage " ngModel><br><br>
+                    <button type="submit"  class="c"  (click)="rechercher(f)">Rechercher</button>
+                </form></th></tr>
+
+            <tr *ngFor="let v of lesvoyages" class="nav-item">
+                <th style="width: 800px; text-align: center;"><br>
+        <img  class="img-thumbnail " src=  {{v.photo}}  /><br><br>
+       <strong style="color: firebrick ;font-size: 20px;">  Voyage N° : {{v.id}} <br></strong>
+       <strong style="color:indianred;font-size: 20px;">   {{  v.libelle }} </strong></th>
+
+     <th  style="width: 500px ;color: royalblue;">
+          <div class="row"><div class="cols-3">
+              <div class="card text-center ">
+                     <div class="card header text center"><br>
+
+                     <strong style="font-size: 15px ">  Prix :  {{ v.prix |p}}   
+                    </strong><br></div>
+                      <div class="card-body">
+        
+            <span> Date De départ  : <span style="color: rgb(219, 129, 219);"> {{ v.datedepart |date}} </span></span><br>
+            <span> Date D'arrivé   : <span style="color: rgb(219, 129, 219);">{{ v.datearrive|date }}</span> </span><br> 
+            <span> Date De Paiement  : <span style="color: rgb(219, 129, 219);">{{ v.datepaiement|date }} </span>  </span> </div> 
+
+       <div class="card-footer">
+        <span [ngClass]="(v.promotion)?'badge bg-success ':'badge bg-warning'">
+            Promotion : {{v.promotion}}</span><br>
+            Nombre des jours : {{v.nbjours}} Jours
+          
+            </div>
+           </div></div></div></th>
+<th  style=" text-align: center; width:500px;"> <button class="btn btn-warning " [routerLink]="['/zone',v.id]">  Zone Touristiques </button></th>
+</tr>
+</thead></table>
+<br><br>
+</body>

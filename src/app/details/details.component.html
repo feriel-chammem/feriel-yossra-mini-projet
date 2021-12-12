@@ -1,0 +1,43 @@
+ <body>
+  <h2>Ajouter un voyage </h2>
+  <div>
+         <form [formGroup]="voyageForm" >
+       <table>
+                <tr><td>
+     <strong>Libelle :</strong>  <br>
+        <input class="form-control" type="text" formControlName="libelle" ><br>
+        <strong>Photo  : </strong> <br>
+         <input class="form-control" type="text" formControlName="photo" ><br>
+         <strong>Prix :</strong>  <br>
+            <input class="form-control"  type="text" formControlName="prix" ><br>
+            <strong> Date de départ : </strong>  <br>
+       
+       <input class="form-control"  type="date" formControlName="datedepart" ><br>
+       <strong> Date d'arrivée : </strong>  <br>
+         <input class="form-control"  type="date"  ><br>
+              
+         <strong>Date de paiement : </strong>  <br>
+         <input class="form-control"  type="date" formControlName="datepaiement" ><br>
+         <strong>  Les régions touristiques : </strong> <br>
+        <input class="form-control"  type="text" formControlName="destination" ><br>
+        <strong>   Nombre des jours :</strong>  <br>
+      <input class="form-control"  type="text" formControlName="nbjours" ><br><br>
+      <button   class="btn btn-success" (click)="ajouter()" > Ajouter</button><br><br></td> 
+      
+        <td>
+          <div style="text-align: center;" *ngFor="let v of lesVoyages" class="list-group">
+        <img  style="width: 200px; height:180px ;" class="rounded-circle" src= {{v.photo}} /> 
+        <div class="d-flex justify-content-between">
+        <span style="color: indianred;font-size: 20px; font-weight: bold;"> {{v.libelle}}  </span><br>
+
+        <button class="btn btn-dark" (click)="supprimer(v.id)">Supprimer</button> <br>
+
+        <button class="btn btn-warning"[routerLink]="['/modification',v.id]">Modifier</button></div><br>
+      </div>
+    </td></tr></table>
+</form>  
+
+
+
+</div>
+</body> 

@@ -1,0 +1,19 @@
+img{width: 280px; height: 250px;}
+h2{text-align:center;color: goldenrod; font-size:50px;}
+body{background-color: beige;}
+
+.c{
+   
+    background: transparent;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    border: 1px solid #B6B6B6;
+    padding: 0 11px;
+    border-radius: 15px;
+    height: 32px;
+}  
+h4{
+    text-align: left;color: goldenrod; font-size:30px;
+}

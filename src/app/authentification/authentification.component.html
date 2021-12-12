@@ -1,0 +1,15 @@
+
+<form #auth="ngForm" (ngSubmit)="onSubmit(auth)"> 
+    <form><br>
+    <div style="text-align:center;">
+    <label for="password">Entrez le mot de passe </label><br>
+    <br>
+   
+    <input name="password" class="form-control" type="password" placeholder="mot de pass " > <br>
+    
+    <button class="btn btn-primary"  (click)="onSubmit(auth)"> valider</button><br><br> 
+
+    <img src="/assets/logo.jpg" style="width:300px; height:300px" />
+</div>
+</form>
+
